@@ -82,13 +82,12 @@ for x in randomWord:
 
     ### Letters guessed
     while(amount_of_times_wrong != 6 and current_letters_right != length_of_word_to_guess):
-        print("\nLetters guessed: ")
-
-    for letter in current_letters_guessed:
-        print(letter, end=" ")
+        print("\nLetters guessed:", end=" ")
+        for letter in current_letters_guessed:
+            print(letter, end=" ")
 
     ### Prompt user for input
-    letterGuessed = input("\nGuess a letter: ")
+    letterGuessed = input("\nGuess a letter: ").lower()
 
     ### User is right
     if(randomWord[current_guess_index] == letterGuessed):
